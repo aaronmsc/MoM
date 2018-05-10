@@ -1,0 +1,4 @@
+﻿  源.cpp
+c:\users\administrator\source\repos\mom\mom\源.cpp(44): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+c:\users\administrator\source\repos\mom\mom\源.cpp(68): warning C4018: “<”: 有符号/无符号不匹配
+  MoM.vcxproj -> C:\Users\Administrator\source\repos\MoM\Debug\MoM.exe
