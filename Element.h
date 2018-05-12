@@ -7,11 +7,10 @@
 #include "uniform_func.h"
 
 
-namespace MoM
+namespace mom
 {
 
-    class FPort;
-    class FPoint;
+    class Port;
 
     class Element
     {
@@ -24,7 +23,7 @@ namespace MoM
         arma::vec3 center_point;
 
         // if on port, pointer of the port
-        const FPort *port;
+        const Port *port;
 
         std::vector<arma::vec3> gauss_points;
         std::vector<real> gauss_weight;
@@ -41,7 +40,7 @@ namespace MoM
     public:
         //Element();
 
-        Element(int index, const std::vector<arma::vec3> &element_vertex, const FPort *port = nullptr);
+        Element(int index, const std::vector<arma::vec3> &element_vertex, const Port *port = nullptr);
 
         ~Element();
 
@@ -55,13 +54,13 @@ namespace MoM
         arma::vec3 GetCenter() { return this->center_point; }
         void Show()
         {
-            for (int i = 0; i < static_cast<int>(this->element_vertex.size()); i++) {
+            for (size_t i = 0; i < static_cast<int>(this->element_vertex.size()); i++) {
                 std::cout << "Vertex[" << i << "]: (" << element_vertex[i][0] << " , " << element_vertex[i][1] << " , " << element_vertex[i][2] << ")" << std::endl;
             }
             std::cout << std::endl;
         }
-        const FPort *GetPort() const;
-        void SetPort(const FPort *port);
+        const Port *GetPort() const;
+        void SetPort(const Port *port);
         const std::vector<arma::vec3> &GetGaussPoint() const;
         const std::vector<real> &GetGaussWeight() const;
         const std::vector<arma::vec3> &GetDiffGaussPoint() const;

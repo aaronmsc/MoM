@@ -2,10 +2,10 @@
 #define _TYPEDEF_H_
 #include<complex>
 
-namespace MoM
+namespace mom
 {
-	typedef double real;
-	typedef std::complex<double> FComplex;
+    typedef double real;
+    typedef std::complex<double> FComplex;
 }
 
 #endif
